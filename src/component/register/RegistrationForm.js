@@ -80,7 +80,7 @@ export default class RegistrationForm extends Component {
                                onChange={this.handleChange}/>
                     </div>
 
-                    <div className="row submit">
+                    <div className="row text-center">
                         <button className="btn waves-effect waves-light" type="submit" name="action">Submit
                             <i className="material-icons right">add_circle</i>
                         </button>
