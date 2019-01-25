@@ -5,14 +5,14 @@ This is simple demo project for login and registration using React Js.
 
 After cloning the project go to Project directory Using
 
--`$ cd project-name`
+- `$ cd project-name`
 
 After that install required dependencies using
 
--`$ npm install`
+- `$ npm install`
 
 ### Run Project
 
  Use below command to start development server
- -`$ npm start`
+ - `$ npm start`
 
