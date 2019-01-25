@@ -3,15 +3,15 @@
  */
 import React, {Component} from 'react';
 import './LoginForm.css';
-import {Redirect} from 'react-router-dom';
+import {Redirect, Link} from 'react-router-dom';
 export default class LoginForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
             username: '',
             password: '',
-            redirect : false,
-            errorMsg:''
+            redirect: false,
+            errorMsg: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,11 +27,11 @@ export default class LoginForm extends Component {
         let username = localStorage.getItem('username');
         let password = localStorage.getItem('password');
         if ((username == e.target.username.value) && (password == e.target.password.value)) {
-            localStorage.setItem('status',true);
-            this.setState({redirect:true});
-            this.setState({errorMsg:'Successfully Logged In'});
+            localStorage.setItem('status', true);
+            this.setState({redirect: true});
+            this.setState({errorMsg: 'Successfully Logged In'});
         } else {
-            this.setState({errorMsg:'Invalid Username or Password'});
+            this.setState({errorMsg: 'Invalid Username or Password'});
             //alert('Invalid Username or Password');
         }
         e.preventDefault();
@@ -39,7 +39,9 @@ export default class LoginForm extends Component {
     }
 
     render() {
-        if(this.state.redirect){return <Redirect to="/dashboard"/>}
+        if (this.state.redirect) {
+            return <Redirect to="/dashboard"/>
+        }
         return (
             <div className="col s12">
                 <div><h4 className="center-align">Login Here</h4></div>
@@ -58,7 +60,12 @@ export default class LoginForm extends Component {
                     <div className="row text-center">
                         <button className="btn waves-effect waves-light" type="submit" name="action">Login
                         </button>
+
                     </div>
+                    <div className="row text-center">
+                        <Link to={'/registration'}>Register Here</Link>
+                    </div>
+
                 </form>
             </div>
         );
