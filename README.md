@@ -1,5 +1,6 @@
 # Authentication using React Js
 This is simple demo project for login and registration using React Js.
+I am using localstorage to store data
 
 #### Installation
 
