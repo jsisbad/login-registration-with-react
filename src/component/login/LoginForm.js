@@ -39,7 +39,8 @@ export default class LoginForm extends Component {
     }
 
     render() {
-        if (this.state.redirect) {
+        let isLoggedIn = localStorage.getItem('status');
+        if ((isLoggedIn == 'true') || this.state.redirect) {
             return <Redirect to="/dashboard"/>
         }
         return (
